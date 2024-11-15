@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <main className={styles.main}>
       <div className={styles.title}>
-        Explore sample apps built with Assistants API
+        Gestalt7000
       </div>
       <div className={styles.container}>
         {Object.entries(categories).map(([name, url]) => (

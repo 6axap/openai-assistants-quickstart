@@ -96,7 +96,9 @@ const Chat = ({
         }),
       }
     );
+    console.log('RESPONSE BODY', response.body);
     const stream = AssistantStream.fromReadableStream(response.body);
+    console.log('STREAM', stream);
     handleReadableStream(stream);
   };
 
@@ -142,6 +144,7 @@ const Chat = ({
   const handleTextDelta = (delta) => {
     if (delta.value != null) {
       appendToLastMessage(delta.value);
+      // console.log('DELTA.VALUE', delta.value);
     };
     if (delta.annotations != null) {
       annotateLastMessage(delta.annotations);
@@ -221,6 +224,7 @@ const Chat = ({
         ...lastMessage,
         text: lastMessage.text + text,
       };
+      // console.log('LASTMSG', lastMessage);
       return [...prevMessages.slice(0, -1), updatedLastMessage];
     });
   };
@@ -245,7 +249,7 @@ const Chat = ({
       })
       return [...prevMessages.slice(0, -1), updatedLastMessage];
     });
-    
+
   }
 
   return (

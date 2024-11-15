@@ -3,7 +3,6 @@
   flex-direction: column-reverse;
   height: 100%;
   width: 100%;
-  font-family: Courier;
 }
 
 .inputForm {
@@ -15,40 +14,32 @@
 }
 
 .input {
-  font-family: Courier;
   flex-grow: 1;
-  padding: 12px 24px;
+  padding: 16px 24px;
   margin-right: 10px;
-  border-radius: 10px;
+  border-radius: 60px;
   border: 2px solid transparent;
   font-size: 1em;
-  background-color: #004d00;
-  color: #72FF72;
+  background-color: #efefef;
 }
 
 .input:focus {
   outline: none !important;
-  border-color: #72FF72;
-  background-color: #003300;
-}
-
-.input::placeholder {
-  color: #729122;
+  border-color: #000;
+  background-color: white;
 }
 
 .button {
-  font-family: Courier;
   padding: 8px 24px;
-  background-color: #004d00;
-  color: #25DF31;
+  background-color: #000;
+  color: white;
   border: none;
   font-size: 1em;
-  border-radius: 10px; /* Removed duplicate border-radius property */
+  border-radius: 60px; /* Removed duplicate border-radius property */
 }
 
 .button:disabled {
-  color: #22df22;
-  background-color: #002200;
+  background-color: lightgrey;
 }
 
 .messages {
@@ -67,7 +58,7 @@
   margin: 8px 0;
   padding: 8px 16px;
   align-self: flex-start;
-  border-radius: 10px;
+  border-radius: 15px;
   max-width: 80%;
   overflow-wrap: break-word;
 }
@@ -80,13 +71,12 @@
 
 .userMessage {
   align-self: flex-end;
-  color: #72FF72;
-  background-color: #004f00;
+  color: #fff;
+  background-color: #000;
 }
 
 .assistantMessage {
-  color: #72FF72;
-  background-color: #003300;
+  background-color: #efefef;
 }
 
 .codeMessage {
