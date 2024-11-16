@@ -55,10 +55,12 @@ type ChatProps = {
   functionCallHandler?: (
     toolCall: RequiredActionFunctionToolCall
   ) => Promise<string>;
+  navigateTo?: string; // New optional string prop
 };
 
 const Chat = ({
   functionCallHandler = () => Promise.resolve(""), // default to return empty string
+  navigateTo,
 }: ChatProps) => {
   const [userInput, setUserInput] = useState("");
   const [messages, setMessages] = useState([]);
