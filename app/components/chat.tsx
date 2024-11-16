@@ -7,6 +7,7 @@ import Markdown from "react-markdown";
 // @ts-expect-error - no types for this yet
 import { AssistantStreamEvent } from "openai/resources/beta/assistants/assistants";
 import { RequiredActionFunctionToolCall } from "openai/resources/beta/threads/runs/runs";
+import { Nova_Oval } from "next/font/google";
 
 type MessageProps = {
   role: "user" | "assistant" | "code";
@@ -140,6 +141,11 @@ const Chat = ({
     setUserInput("");
     setInputDisabled(true);
     scrollToBottom();
+  };
+
+  const handleNavigation = (destination: string) => {
+    console.log(`Navigating to: ${destination}`);
+    setUserInput(destination);
   };
 
   /* Stream Event Handlers */
