@@ -5,6 +5,7 @@ export const runtime = "nodejs";
 
 // Send a new message to a thread
 export async function POST(request, { params: { threadId } }) {
+  console.log('APIKEY', process.env.NEXT_PUBLIC_OPENAI_API_KEY);
   const { content } = await request.json();
 
   const message = await openai.beta.threads.messages.create(threadId, {
